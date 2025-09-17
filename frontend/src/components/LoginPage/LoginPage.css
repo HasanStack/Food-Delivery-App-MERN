@@ -1,0 +1,111 @@
+/* Overlay background */
+.login-popup {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #00000090;
+  display: grid;
+}
+
+/* Container box */
+.login-popup-container {
+  place-self: center;
+  width: max(23vw, 330px);
+  color: #808080;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 30px;
+  animation: fadeIn 0.5s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title bar */
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.login-popup-title img {
+  width: 20px;
+  cursor: pointer;
+}
+
+/* Input fields container */
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Individual inputs */
+.login-popup-inputs input {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Placeholder spacing */
+.login-popup-inputs input::placeholder {
+  color: #999;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  font-style: italic;
+}
+
+/* Submit button */
+.login-popup-container button {
+  padding: 10px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-popup-container button:hover {
+  background-color: #e53935;
+}
+
+/* Checkbox and policy */
+.login-popup-condition {
+  display: flex;
+  align-items:start;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+/* Switch text */
+.login-popup-container p {
+  font-size: 13px;
+  text-align: center;
+}
+
+.login-popup-container span {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
